@@ -13,7 +13,7 @@ while True:
     #Plot the points in the walk.
 
     plt.style.use('classic')
-    fig, ax = plt.subplots(figsize=(15, 9), dpi=128)
+    fig, ax = plt.subplots(dpi=256)
     point_numbers = range(rw.num_points)
     ax.plot(rw.x_values, rw.y_values, linewidth=1)
     ax.set_aspect('equal')
