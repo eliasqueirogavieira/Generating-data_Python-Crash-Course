@@ -7,12 +7,12 @@
 import matplotlib.pyplot as plt
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    x_values = range(1,1001)
-    y_values = [x**2 for x in x_values]
+    x_values = range(1,5001)
+    y_values = [x**3 for x in x_values]
 
     plt.style.use('seaborn')
     fig, ax = plt.subplots()
-    ax.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Blues, s=10)
+    ax.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Greens, s=10)
 
     #Set chart title and label axes.
     ax.set_title("Square numbers", fontsize=24)
@@ -20,10 +20,10 @@ if __name__ == '__main__':
     ax.set_ylabel("Square of Value", fontsize=14)
 
     #Set the range for each axis.
-    ax.axis([0, 1100, 0, 1100000])
+    ax.axis([0, 5100, 0, 5100**3])
     ax.ticklabel_format(style='plain')
 
-    plt.savefig('squares_plot.png', bbox_inches='tight')
+    plt.savefig('new_scatter.png', bbox_inches='tight')
     plt.show()
 
 
